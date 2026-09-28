@@ -1,4 +1,8 @@
 import asyncio
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from devtools_faq.infrai_gateway import InfraiGateway
 from devtools_faq.suggestion_service import FaqSuggestionService
@@ -16,4 +20,3 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-
